@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo - Landing Page com Tracking GTX</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        .whatsapp-button {
+            display: block;
+            background: #25D366;
+            color: white;
+            text-decoration: none;
+            padding: 18px 40px;
+            border-radius: 50px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+        }
+
+        .whatsapp-button:hover {
+            background: #128C7E;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+
+        .whatsapp-button:before {
+            content: "📱 ";
+            margin-right: 10px;
+        }
+
+        .features {
+            margin: 30px 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        .features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: #555;
+        }
+
+        .features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #25D366;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .powered {
+            margin-top: 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Fale com a Gente!</h1>
+        <p>Receba um orçamento personalizado em minutos</p>
+
+        <ul class="features">
+            <li>Atendimento imediato</li>
+            <li>Orçamento sem compromisso</li>
+            <li>Especialistas à sua disposição</li>
+        </ul>
+
+        <!-- Botão WhatsApp - O tracking.js detecta automaticamente -->
+        <a href="https://wa.me/5511999999999?text=Olá, vim do site!" class="whatsapp-button">
+            Falar no WhatsApp
+        </a>
+
+        <div class="powered">
+            Powered by GTX Server-Side Tracking
+        </div>
+    </div>
+
+    <!-- Meta Pixel Code (ALTERE O PIXEL_ID) -->
+    <script>
+        !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '611003988383118'); // SEU PIXEL ID
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=611003988383118&ev=PageView&noscript=1"/>
+    </noscript>
+
+    <!-- GTX Tracking Script -->
+    <script src="tracking.js"></script>
+
+    <!-- OU cole o código inline: -->
+    <!--
+    <script>
+        // Cole aqui o conteúdo de tracking.js
+    </script>
+    -->
+</body>
+</html>

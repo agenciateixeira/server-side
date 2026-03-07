@@ -1,0 +1,24 @@
+# Credenciais e arquivos sensíveis
+.env
+config/.env
+
+# Node modules
+node_modules/
+
+# Logs
+logs/*.log
+*.log
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Temporários
+*.tmp
+*.temp
