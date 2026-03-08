@@ -204,6 +204,7 @@ async function sendLeadToMetaCAPI(lead) {
         currency: 'BRL'
       }
     }]
+    // test_event_code: 'TEST51851'  // Remover em produção
   };
 
   if (CONFIG.mode.dryRun) {
